@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=mapboxdjango
+POSTGRES_USER=hZLqLTZzACagrVYMfvaVxQPsuvHMzhyz
+POSTGRES_PASSWORD=k4KQBlWKYToCSEEgTchV7KOi6S9soMcUUaLRCZW5qRDVhRPk4LBkFtzR2k4I0rTH
