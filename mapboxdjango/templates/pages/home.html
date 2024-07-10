@@ -1,1 +1,35 @@
 {% extends "base.html" %}
+
+{% block title %}
+  Search Property
+{% endblock title %}
+{% block content %}
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <form id="address-search" class="d-flex">
+          <input name="address"
+                 id="address-input-el"
+                 class="form-control me-2"
+                 type="search"
+                 placeholder="Search Address"
+                 aria-label="Search" />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
+{% block inline_javascript %}
+  <script>
+    let searchForm = document.getElementById("address-search");
+
+    searchForm.addEventListener("submit", function(event) {
+      event.preventDefault(); // prevent auto submit
+
+      let formData = new FormData(this);
+      let address = formData.get('address');
+      window.location.href = `{% url 'inspect:search' %}?address=${address}`
+    });
+  </script>
+{% endblock inline_javascript %}
