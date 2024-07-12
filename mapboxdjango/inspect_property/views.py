@@ -1,7 +1,7 @@
 # Create your views here.
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def index(request):
     query_param = request.GET.get("address", None)
-    return HttpResponse(f"Inspect Properties @ address: {query_param}")
+    return render(request, "pages/inspect.html", {"address": query_param})
